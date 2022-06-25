@@ -4,11 +4,16 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
-set :batabase, "sqlite3:barbershop.db"
+set :database, {:adapter =>'sqlite3', :database=>'barbershop.db'}
 
 class Client < ActiveRecord::Base
 end
 
-get '/' do
-	erb "Hello!"			
+class Barber < ActiveRecord::Base
+end
+
+get '/' do 
+
+	@barber = Barber.count	
+	erb "Hello!"		
 end   

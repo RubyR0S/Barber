@@ -8,6 +8,8 @@ gem "activerecord"
 
 gem "sinatra-activerecord"
 
+gem "rake"
+
 gem "sinatra-contrib"
 
 group :development do
