@@ -13,7 +13,5 @@ class Barber < ActiveRecord::Base
 end
 
 get '/' do 
-
-	@barber = Barber.count	
-	erb "Hello!"		
+	erb :index		
 end   
